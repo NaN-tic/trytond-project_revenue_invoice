@@ -1,0 +1,11 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:account.invoice.line,purchase_work:"
+msgid "Purchase Work Effort"
+msgstr "Proyecto de la compra"
+
+msgctxt "view:project.work:"
+msgid "Invoices"
+msgstr "Facturas"
