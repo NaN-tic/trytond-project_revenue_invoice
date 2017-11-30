@@ -11,4 +11,4 @@ def register():
         work.Work,
         invoice.InvoiceLine,
         purchase.PurchaseLine,
-        module='project_revenue', type_='model')
+        module='project_revenue_invoice', type_='model')
