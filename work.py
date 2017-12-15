@@ -15,3 +15,14 @@ class Work:
             ('invoice.company', '=', Eval('company', -1)),
             ],
         depends=['company'])
+
+    @classmethod
+    def get_amounts(cls, works, names):
+        res = super(Work, cls).get_amounts(works, names)
+        # sum added invoices lines in current project or childs
+        if 'invoiced_cost' in names:
+            for work in works:
+                for line in work.invoice_lines:
+                    if line.type == 'line':
+                        res['invoiced_cost'][work.id] += line.amount
+        return res
